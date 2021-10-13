@@ -16,4 +16,15 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [
         require('tailwindcss'),
-    ]);
+    ])
+    .browserSync({
+        proxy: {
+            target: "http://127.0.0.1"
+        },
+        files: [
+            './resources/**/*',
+            './public/**/*'
+        ],
+        open: false,
+        reloadOnRestart: true
+    });
