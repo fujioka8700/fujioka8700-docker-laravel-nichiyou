@@ -10,10 +10,18 @@
     <title>日用品管理アプリ</title>
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('/js/app.js') }}" defer></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <tailwindcss-breakpoint></tailwindcss-breakpoint>
+        <header>
+            <page-header></page-header>
+        </header>
     </div>
 
 </body>
