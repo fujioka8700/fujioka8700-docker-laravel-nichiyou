@@ -7,7 +7,7 @@
     <meta name="description" content="検索結果の説明文">
     <meta name="keywords" content="カンマ区切りで、キーワード">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>日用品管理アプリ</title>
+    <title>{{ config('app.name') }}</title>
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <style>
@@ -22,6 +22,25 @@
         <header>
             <page-header></page-header>
         </header>
+        <main>
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-6">
+                    <div class="col-span-4">
+                        <article>
+                            <article-list></article-list>
+                        </article>
+                    </div>
+                    <div class="hidden md:block md:col-span-2">
+                        <aside>
+                            <aside-list></aside-list>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <page-footer></page-footer>
+        </footer>
     </div>
 
 </body>

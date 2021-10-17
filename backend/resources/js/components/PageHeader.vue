@@ -119,13 +119,14 @@
 
 <script>
     import ClickOutside from 'vue-click-outside'
+
     export default {
         directives: {
             ClickOutside
         },
         data() {
             return {
-                menuOpen: false
+                menuOpen: false,
             }
         },
         methods: {
